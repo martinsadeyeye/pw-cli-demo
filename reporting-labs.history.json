@@ -1,0 +1,83 @@
+[
+ {
+  "time": 1793575480832,
+  "duration": 2056.17,
+  "passed": 4,
+  "failed": 0,
+  "flaky": 0,
+  "skipped": 0,
+  "total": 4,
+  "tests": {
+   "::tests/auth/empty-password-login.spec.ts::Login › empty password shows required error @smoke @critical": [
+    "p",
+    857
+   ],
+   "::tests/auth/empty-username-login.spec.ts::Login › empty username shows required error @smoke @critical": [
+    "p",
+    818
+   ],
+   "::tests/auth/locked-out-login.spec.ts::Login › locked out user sees error @smoke @critical": [
+    "p",
+    878
+   ],
+   "::tests/auth/standard-login.spec.ts::Login › standard user logs in successfully @smoke @critical": [
+    "p",
+    944
+   ]
+  }
+ },
+ {
+  "time": 1793575617877,
+  "duration": 2672.769,
+  "passed": 4,
+  "failed": 0,
+  "flaky": 0,
+  "skipped": 0,
+  "total": 4,
+  "tests": {
+   "::tests/auth/empty-password-login.spec.ts::Login › empty password shows required error @smoke @critical": [
+    "p",
+    944
+   ],
+   "::tests/auth/empty-username-login.spec.ts::Login › empty username shows required error @smoke @critical": [
+    "p",
+    939
+   ],
+   "::tests/auth/locked-out-login.spec.ts::Login › locked out user sees error @smoke @critical": [
+    "p",
+    972
+   ],
+   "::tests/auth/standard-login.spec.ts::Login › standard user logs in successfully @smoke @critical": [
+    "p",
+    1000
+   ]
+  }
+ },
+ {
+  "time": 1793575671018,
+  "duration": 2876.5280000000002,
+  "passed": 4,
+  "failed": 0,
+  "flaky": 0,
+  "skipped": 0,
+  "total": 4,
+  "tests": {
+   "::tests/auth/empty-password-login.spec.ts::Login › empty password shows required error @smoke @critical": [
+    "p",
+    1202
+   ],
+   "::tests/auth/empty-username-login.spec.ts::Login › empty username shows required error @smoke @critical": [
+    "p",
+    1190
+   ],
+   "::tests/auth/locked-out-login.spec.ts::Login › locked out user sees error @smoke @critical": [
+    "p",
+    1249
+   ],
+   "::tests/auth/standard-login.spec.ts::Login › standard user logs in successfully @smoke @critical": [
+    "p",
+    1354
+   ]
+  }
+ }
+]
