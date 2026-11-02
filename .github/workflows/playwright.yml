@@ -45,6 +45,12 @@ jobs:
           retention-days: 14
           if-no-files-found: warn
 
+      - name: Upload reportingLabs report for GitHub Pages
+        if: ${{ !cancelled() && github.event_name != 'pull_request' }}
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: reporting-labs/
+
       - name: Upload Allure results
         if: ${{ !cancelled() }}
         uses: actions/upload-artifact@v4
@@ -71,3 +77,23 @@ jobs:
           path: test-results/
           retention-days: 14
           if-no-files-found: ignore
+
+  deploy-report:
+    name: Publish report to GitHub Pages
+    needs: test
+    # Publish even when tests fail, so failing runs can be inspected; never from PRs.
+    if: ${{ !cancelled() && github.event_name != 'pull_request' && needs.test.result != 'skipped' }}
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
